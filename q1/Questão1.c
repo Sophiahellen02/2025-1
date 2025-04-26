@@ -1,15 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// Função para verificar se um número é primo
-bool ehPrimo(int n){
-    if (n <= 1) return false; // 0 e 1 não são primos
-    for (int i = 2; i * i <= n; i++){ // Verifica até a raiz quadrada de n
-        if (n % i == 0) return false; // Se n for divisível por i, não é primo
-    }
-    return true; // Se não encontrou divisores, é primo
-}
-
 int main(){
     int inicio, fim;
 
@@ -37,4 +28,14 @@ int main(){
     printf("\n");
 
     return 0;
+}
+
+
+// Função para verificar se um número é primo
+bool ehPrimo(int n){
+    if (n <= 1) return false; // 0 e 1 não são primos
+    for (int i = 2; i * i <= n; i++){ // Verifica até a raiz quadrada de n
+        if (n % i == 0) return false; // Se n for divisível por i, não é primo
+    }
+    return true; // Se não encontrou divisores, é primo
 }
