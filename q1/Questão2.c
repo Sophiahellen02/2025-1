@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+int potencia(int base, int expoente){
+    int resultado = 1;
+
+    for(int i = 0; i < expoente; i++){
+        resultado *= base;
+    }
+
+    return resultado;
+}
+
 int main(){
     int base, expoente;
 
@@ -20,12 +30,4 @@ int main(){
     return 0;
 }
 
-int potencia(int base, int expoente){
-    int resultado = 1;
 
-    for(int i = 0; i < expoente; i++){
-        resultado *= base;
-    }
-
-    return resultado;
-}
