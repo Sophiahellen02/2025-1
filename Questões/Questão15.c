@@ -15,9 +15,18 @@ void exibirPalavra(char palavra[], int acertou[]) {
     printf("\n");
 }
 
+int letraJaDigitada(char letrasTentadas[], int totalTentadas, char letra) {
+    for (int i = 0; i < totalTentadas; i++) {
+        if (letrasTentadas[i] == letra) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
 int main() {
-    char palavra[100], letra;
-    int tentativas = 6, acertou[100] = {0}, totalAcertos = 0;
+    char palavra[100], letra, letrasTentadas[26] = {0};;
+    int tentativas = 6, acertou[100] = {0}, totalAcertos = 0, totalTentadas = 0;
 
     printf("Digite a palavra secreta: ");
     scanf("%s", palavra);
@@ -33,6 +42,13 @@ int main() {
         printf("Digite uma letra: ");
         scanf(" %c", &letra);
         letra = tolower(letra);
+
+        if (letraJaDigitada(letrasTentadas, totalTentadas, letra)) {
+            printf("Você já tentou a letra '%c'. Tente outra.\n", letra);
+            continue;
+        }
+
+        letrasTentadas[totalTentadas++] = letra;
 
         int acertouLetra = 0;
         for (int i = 0; i < tamanho; i++) {
