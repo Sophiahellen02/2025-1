@@ -1,3 +1,5 @@
+// Questão 2: Potência de um número
+
 #include <stdio.h>
 
 int potencia(int base, int expoente){
@@ -27,7 +29,7 @@ int main(){
 
     printf("%d^%d = %d\n", base, expoente, resultado);
 
-    return 0;
+    return (0);
 }
 
 

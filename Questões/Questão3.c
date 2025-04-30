@@ -1,3 +1,5 @@
+// Questão 3: Inverter um número
+
 #include <stdio.h>
 
 int inverternumero(int numero){
@@ -21,5 +23,5 @@ int main(){
     int resultado = inverternumero(numero);
     printf("O inverso de %d eh %d\n", numero, resultado);
 
-    return 0;
+    return (0);
 }

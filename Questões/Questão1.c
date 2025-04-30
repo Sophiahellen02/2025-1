@@ -1,3 +1,5 @@
+// Questão 1: Números primos em um intervalo
+
 #include <stdio.h>
 #include <stdbool.h>
 
@@ -32,5 +34,5 @@ int main(){
 
     printf("\n");
 
-    return 0;
+    return (0);
 }
