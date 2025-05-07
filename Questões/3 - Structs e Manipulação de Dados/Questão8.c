@@ -17,7 +17,7 @@ void limparBuffer() {
 void cadastrarProduto(Produto produtos[], int *n) {
     printf("\nDigite o nome do produto: ");
     fgets(produtos[*n].nome, sizeof(produtos[*n].nome), stdin);
-    strtok(produtos[*n].nome, "\n");  // remove o \n lido pelo fgets
+    strtok(produtos[*n].nome, "\n");
 
     printf("Digite o código do produto: ");
     scanf("%d", &produtos[*n].codigo);
@@ -28,7 +28,7 @@ void cadastrarProduto(Produto produtos[], int *n) {
     printf("Digite o preço do produto: ");
     scanf("%f", &produtos[*n].preco);
 
-    limparBuffer(); // limpa o \n deixado por scanf
+    limparBuffer();
     (*n)++;
 }
 
